@@ -1,0 +1,82 @@
+/* ============================================
+   NuvemX Fintech — Custom Styles
+   Projeto FIAP — Fase 3 (HTML + CSS + Tailwind)
+   ============================================ */
+
+/* ---------- Base ---------- */
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ---------- Custom Shadow Token ---------- */
+.shadow-card {
+  box-shadow:
+    0 2px 12px rgba(0, 0, 0, 0.04),
+    0 10px 40px rgba(0, 0, 0, 0.08);
+}
+
+/* ---------- Action Buttons ---------- */
+.action-btn {
+  cursor: pointer;
+  border: none;
+  transition: transform 0.1s ease;
+}
+
+.action-btn:active {
+  transform: scale(0.97);
+}
+
+/* ---------- Transaction List Hover ---------- */
+ul li {
+  transition: background-color 0.15s ease;
+}
+
+ul li:hover {
+  background-color: #f9fafb;
+}
+
+/* ---------- Balance Card Shimmer ---------- */
+@keyframes shimmer-bg {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.balance-card {
+  background-size: 200% 200%;
+  animation: shimmer-bg 6s ease infinite;
+}
+
+/* ---------- Scrollbar (Webkit) ---------- */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 3px;
+}
+
+/* ---------- Selection Color ---------- */
+::selection {
+  background-color: #3b82f6;
+  color: #ffffff;
+}
+
+/* ---------- Responsive Fine-tuning ---------- */
+@media (max-width: 639px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+}
